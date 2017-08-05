@@ -14,4 +14,7 @@ Global
 		{B747883D-4A7B-41C7-A8B7-3B916BA6CBA9}.Release|x86.ActiveCfg = Release|x86
 		{B747883D-4A7B-41C7-A8B7-3B916BA6CBA9}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		description = This is an example C# command line programm that will take 5 input parameters which will be used to create an ServiceNow incident using REST API.
+	EndGlobalSection
 EndGlobal
