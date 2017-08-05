@@ -6,4 +6,4 @@ exit with a message.
 
 Command line:<BR/>
 CreateIncidentCstoServiceNow.exe %1 %2 %3 %4 %5<BR/>
-CreateIncidentCstoServiceNow.exe <ServiceNow Instance Name> <Username> <Password> <Short Description> <Comment>
+CreateIncidentCstoServiceNow.exe "ServiceNow Instance Name" "Username" "Password" "Short Description" "Description"
