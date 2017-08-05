@@ -22,7 +22,7 @@ namespace CreateIncidentCstoServiceNow
             Console.WriteLine("Start REST API Call");
 			System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
 			client.BaseAddress = new System.Uri(URL);
-			byte[] cred = UTF8Encoding.UTF8.GetBytes("admin:YYtYYt01");
+			byte[] cred = UTF8Encoding.UTF8.GetBytes("admin1:YYtYYt01");
 			client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(cred));
 			client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
