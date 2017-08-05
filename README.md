@@ -5,5 +5,5 @@ create an ServiceNow incident using REST API. If not 5 parameters are supplied t
 exit with a message.
 
 Command line:
-CreateIncidentCstoServiceNow.exe %1 %2 %3 %4 %5
+CreateIncidentCstoServiceNow.exe %1 %2 %3 %4 %5<BR/>
 CreateIncidentCstoServiceNow.exe <ServiceNow Instance Name> <Username> <Password> <Short Description> <Comment>
