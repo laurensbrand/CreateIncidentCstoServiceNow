@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Net.Http;
 using System.Text;
-using Newtonsoft.Json.Linq;
-using System.Json;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace CreateIncidentCstoServiceNow
 {
@@ -31,14 +31,12 @@ namespace CreateIncidentCstoServiceNow
 
 		private static void CreateIncidentTicket(string URL, string USERNAME, string PASSWORD, string SHORT_DESCRIPTION, string COMMENTS)
 		{
-            string DATA = @"{
-            ""short_description"": ""{0}"",
-            ""comments"": ""{1}""
-            }";
-            
-            //dynamic DATA = new JObject();
-            //DATA.short_description = SHORT_DESCRIPTION;
-            //DATA.comments = COMMENTS;
+            string DATA = string.Format(@"{{
+            ""short_description"":""{0}"",
+            ""comments"":""{1}""}}"
+                                        , 
+                                        SHORT_DESCRIPTION,
+                                        COMMENTS);
 
 
 			System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
