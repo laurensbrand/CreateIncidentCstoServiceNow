@@ -31,13 +31,14 @@ namespace CreateIncidentCstoServiceNow
 
 		private static void CreateIncidentTicket(string URL, string USERNAME, string PASSWORD, string SHORT_DESCRIPTION, string COMMENTS)
 		{
-            string DATA = string.Format(@"{{
-            ""short_description"":""{0}"",
-            ""comments"":""{1}""}}"
-                                        , 
-                                        SHORT_DESCRIPTION,
-                                        COMMENTS);
+			List<Incident> eList = new List<Incident>();
+			Incident e = new Incident();
+            e.short_description = SHORT_DESCRIPTION;
+            e.comments = COMMENTS;
 
+			eList.Add(e);
+
+            string DATA = JsonConvert.SerializeObject(eList, Formatting.Indented);
 
 			System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
 			client.BaseAddress = new System.Uri(URL);
@@ -54,6 +55,12 @@ namespace CreateIncidentCstoServiceNow
 				string result = messge.Content.ReadAsStringAsync().Result;
                 Console.WriteLine(result);
 			}
+		}
+
+		public class Incident
+		{
+			public string short_description;
+			public string comments;
 		}
 	}
 }
